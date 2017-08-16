@@ -1,5 +1,8 @@
 'use strict'
 
 module.exports = (logSources, printer) => {
-  printer.print(logSources[0].last);
+
+  for ( var i = 0; i < logSources.length; i++ ) {
+    printer.print(logSources[i].last);
+  }
 }
