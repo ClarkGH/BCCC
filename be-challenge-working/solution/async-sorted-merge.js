@@ -1,5 +1,19 @@
-'use strict'
+'use strict';
+
+const _ = require('lodash'),
+  Promise = require('bluebird');
+
 
 module.exports = (logSources, printer) => {
-	throw new Error('Not implemented yet!  That part is up to you!')
+  var promiseArr = [];
+
+  logSources.forEach(function ( item ) {
+    promiseArr.push(item.popAsync());
+  });
+
+  Promise.all( promiseArr )
+    .then( function( log ) {
+      _.sortBy( logSources, 'last.date' );
+      console.log( log );
+    });
 }
