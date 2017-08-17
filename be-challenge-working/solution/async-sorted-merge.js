@@ -5,28 +5,18 @@ const _ = require('lodash'),
 
 
 module.exports = (logSources, printer) => {
-  var promiseArr = [];
-  popDrain( logSources );
+  var logArr = [];
 
-  // Promise.all( promiseArr )
-  //   .then( function( log ) {
-  //     console.log( log[0] )
-      // _.sortBy( promiseArr, 'last.date' );
-    // });
+  logSources.forEach( popper );
 
-  function popDrain( items ) {
-    var i = 0;
-
-    while ( i < items.length ) {
-      items[i].popAsync()
-        .then( function( item ){
-          promiseArr.push(item)
-          if ( !items[i].drained ) {
-            popDrain( items[i] );
-          } else {
-            i++;
-          }
-        });  
-    }
+  function popper( logSource ) {
+    logSource.popAsync()
+      .then( function( val ) {
+        // console.log(logSource)
+        logArr.push(val);
+      });
   }
+
+  
+
 }
