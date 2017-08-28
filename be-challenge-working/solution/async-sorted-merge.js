@@ -9,7 +9,7 @@ module.exports = ( logSources, printer ) => {
     logSource.popAsync();
   }).then( ( poppedLogSources ) => {
       var sortedSources = _.sortBy( poppedLogSources, ( logSourcePopped ) => {
-        return (logSourcePopped.last.date)
+        return (logSourcePopped.last.date);
       });
       sortedSources.forEach( ( sortedLogSource ) => {
         printer.print( sortedLogSource.last );

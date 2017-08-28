@@ -16,3 +16,7 @@ We expect candidates to spend 1-3 hours on this exercise.  By the way, you may u
 ## Submission
 
 Simply create a GitHub repo and email us the link!
+
+## To run:
+
+Simple uncomment out lined 30-34 for the sync portion, and run the server start command for index.js. Do the same for lines 44-48 for the asynchronous portion.

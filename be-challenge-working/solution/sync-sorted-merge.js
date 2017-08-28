@@ -12,8 +12,8 @@ module.exports = ( logSources, printer ) => {
   }
 
   sortedArr = _.sortBy( logSources, 'last.date' );
-  sortedArr.forEach( ( el ) => {
-    printer.print( el.last );
+  sortedArr.forEach( ( sortedLogSource ) => {
+    printer.print( sortedLogSource.last );
   });
 
   printer.done();

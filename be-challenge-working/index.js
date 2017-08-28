@@ -27,11 +27,11 @@ const sourceCount = 100
  * Call 'printer.done()' at the end to get a few stats on your solution!
  */
 
-const syncLogSources = []
-for (let i = 0; i < sourceCount; i++) {
-	syncLogSources.push(new LogSource())
-}
-require('./solution/sync-sorted-merge')(syncLogSources, new Printer())
+// const syncLogSources = []
+// for (let i = 0; i < sourceCount; i++) {
+// 	syncLogSources.push(new LogSource())
+// }
+// require('./solution/sync-sorted-merge')(syncLogSources, new Printer())
 
 /**
  * Challenge Number 2!
@@ -41,8 +41,8 @@ require('./solution/sync-sorted-merge')(syncLogSources, new Printer())
  * or boolean false once the LogSource has ended.
  */
 
-const asyncLogSources = []
-for (let i = 0; i < sourceCount; i++) {
-	asyncLogSources.push(new LogSource())
-}
-require('./solution/async-sorted-merge')(asyncLogSources, new Printer())
+// const asyncLogSources = []
+// for (let i = 0; i < sourceCount; i++) {
+// 	asyncLogSources.push(new LogSource())
+// }
+// require('./solution/async-sorted-merge')(asyncLogSources, new Printer())
