@@ -8,9 +8,7 @@ module.exports = ( logSources, printer ) => {
 
   while ( i < logSources.length ) {
     logSources[i].pop();     
-    if ( logSources[i].drained ) {
-      i++;
-    }
+    i++;
   }
 
   sortedArr = _.sortBy( logSources, 'last.date' );
